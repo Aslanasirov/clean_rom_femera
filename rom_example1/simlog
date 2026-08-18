@@ -1,0 +1,40 @@
+-catch_rsh /cm/local/apps/sge/var/spool/node013/active_jobs/198768.1/pe_hostfile
+node013:1
+ 
+:: initializing oneAPI environment ...
+   198768: BASH_VERSION = 4.2.46(2)-release
+:: advisor -- latest
+:: ccl -- latest
+:: clck -- latest
+:: compiler -- latest
+:: dal -- latest
+:: debugger -- latest
+:: dev-utilities -- latest
+:: dnnl -- latest
+:: dpcpp-ct -- latest
+:: dpl -- latest
+:: inspector -- latest
+:: intelpython -- latest
+:: ipp -- latest
+:: ippcp -- latest
+:: ipp -- latest
+:: itac -- latest
+:: mkl -- latest
+:: mpi -- latest
+:: tbb -- latest
+:: vpl -- latest
+:: vtune -- latest
+:: oneAPI environment initialized ::
+ 
+rm: cannot remove ‘tension.lck’: No such file or directory
+Abaqus License Manager checked out the following licenses:
+Abaqus/Standard checked out 5 tokens from Flexnet server licenseserver.it.vanderbilt.edu.
+<28 out of 45 licenses remain available>.
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.3.0 Build 20210609_000000
+Copyright (C) 1985-2021 Intel Corporation.  All rights reserved.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.3.0 Build 20210609_000000
+Copyright (C) 1985-2021 Intel Corporation.  All rights reserved.
+
+***** Execution time of RunSparse is 
+24.613043113

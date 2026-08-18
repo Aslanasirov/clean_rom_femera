@@ -1,0 +1,203 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.ModelFromInputFile(inputFileName=
+    '/home/anasirov/spectral/Simulation/Simulation/tension.inp', name=
+    'tension')
+del mdb.models['Model-1']
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['tension'].boundaryConditions['Disp-BC-7'].suppress()
+mdb.models['tension'].rootAssembly.Set(name='DISPZ', nodes=
+    mdb.models['tension'].rootAssembly.instances['PART-1-1'].nodes.getSequenceFromMask(
+    mask=('[#33 ]', ), ))
+mdb.models['tension'].DisplacementBC(amplitude='AMP-1', createStepName='Step-1'
+    , distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'BC-8', region=mdb.models['tension'].rootAssembly.sets['DISPY'], u1=UNSET, 
+    u2=1.0, u3=UNSET, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=100, memoryUnits=GIGA_BYTES, model='tension', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='tensions_y', nodalOutputPrecision=SINGLE
+    , numCpus=1, numGPUs=0, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine=
+    '/home/anasirov/spectral/Simulation/Simulation/UMAT.f', waitHours=0, 
+    waitMinutes=0)
+mdb.models['tension'].DisplacementBC(amplitude='AMP-1', createStepName='Step-1'
+    , distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'BC-9', region=mdb.models['tension'].rootAssembly.sets['DISPZ'], u1=UNSET, 
+    u2=UNSET, u3=1.0, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+mdb.models['tension'].boundaryConditions['BC-8'].suppress()
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=100, memoryUnits=GIGA_BYTES, model='tension', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='tension_z', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine=
+    '/home/anasirov/spectral/Simulation/Simulation/UMAT.f', waitHours=0, 
+    waitMinutes=0)
+mdb.jobs.changeKey(fromName='tensions_y', toName='tension_y')
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['tension'].boundaryConditions['BC-9'].suppress()
+mdb.models['tension'].boundaryConditions['BC-8'].suppress()
+mdb.models['tension'].boundaryConditions['BC-8'].resume()
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['tension'].boundaryConditions['BC-8'].suppress()
+mdb.models['tension'].boundaryConditions['BC-8'].resume()
+# Save by anasirov on 2023_08_14-12.30.25; build 2020 2019_09_13-12.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['tension'].boundaryConditions['BC-8'].suppress()
+mdb.models['tension'].boundaryConditions['Disp-BC-4'].setValues(u2=SET, u3=SET)
+mdb.models['tension'].boundaryConditions['Disp-BC-5'].suppress()
+mdb.models['tension'].boundaryConditions['Disp-BC-6'].suppress()
+mdb.models['tension'].DisplacementBC(amplitude='AMP-1', createStepName='Step-1'
+    , distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'disp_x', region=mdb.models['tension'].rootAssembly.sets['DISPX'], u1=UNSET
+    , u2=1.0, u3=UNSET, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+mdb.jobs.changeKey(fromName='tension_y', toName='tension_xy')
+mdb.jobs.changeKey(fromName='tension_z', toName='tension_xz')
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=100, memoryUnits=GIGA_BYTES, model='tension', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='shear_xy', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine=
+    '/home/anasirov/spectral/Simulation/Simulation/UMAT.f', waitHours=0, 
+    waitMinutes=0)
+del mdb.jobs['tension_xy']
+del mdb.jobs['tension_xz']
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=100, memoryUnits=GIGA_BYTES, model='tension', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='shear_xz', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine=
+    '/home/anasirov/spectral/Simulation/Simulation/UMAT.f', waitHours=0, 
+    waitMinutes=0)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=100, memoryUnits=GIGA_BYTES, model='tension', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='shear_yz', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine=
+    '/home/anasirov/spectral/Simulation/Simulation/UMAT.f', waitHours=0, 
+    waitMinutes=0)
+# Save by anasirov on 2023_08_14-12.34.44; build 2020 2019_09_13-12.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['tension'].boundaryConditions.changeKey(fromName='disp_x', toName=
+    'shear_xy')
+mdb.models['tension'].DisplacementBC(amplitude='AMP-1', createStepName='Step-1'
+    , distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'shear_xz', region=mdb.models['tension'].rootAssembly.sets['DISPX'], u1=
+    UNSET, u2=UNSET, u3=1.0, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+mdb.models['tension'].boundaryConditions['shear_xy'].suppress()
+# Save by anasirov on 2023_08_14-12.35.55; build 2020 2019_09_13-12.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['tension'].boundaryConditions['shear_xz'].suppress()
+mdb.models['tension'].boundaryConditions['Disp-BC-4'].suppress()
+mdb.models['tension'].boundaryConditions['Disp-BC-5'].resume()
+mdb.models['tension'].DisplacementBC(amplitude='AMP-1', createStepName='Step-1'
+    , distributionType=UNIFORM, fieldName='', fixed=OFF, localCsys=None, name=
+    'shear_yz', region=mdb.models['tension'].rootAssembly.sets['DISPY'], u1=
+    UNSET, u2=UNSET, u3=1.0, ur1=UNSET, ur2=UNSET, ur3=UNSET)
+# Save by anasirov on 2023_08_14-12.37.05; build 2020 2019_09_13-12.49.31 163176
+# Save by anasirov on 2023_08_14-12.37.14; build 2020 2019_09_13-12.49.31 163176
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['tension'].boundaryConditions['Disp-BC-5'].setValues(u1=SET, u3=SET)
+# Save by anasirov on 2023_08_14-12.53.46; build 2020 2019_09_13-12.49.31 163176
+# Save by anasirov on 2023_08_14-12.53.48; build 2020 2019_09_13-12.49.31 163176
+# Save by anasirov on 2023_08_14-13.02.27; build 2020 2019_09_13-12.49.31 163176

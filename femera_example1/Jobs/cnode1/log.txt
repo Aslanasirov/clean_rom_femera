@@ -1,0 +1,58 @@
+-catch_rsh /cm/local/apps/sge/var/spool/node013/active_jobs/198762.1/pe_hostfile
+node013:32
+(standard_in) 1: syntax error
+1
+13
+tput: No value for $TERM and no -T specified
+[92m Pass [0m cpucount.sh counted 32 physical cores.
+tput: No value for $TERM and no -T specified
+[92m Pass [0m cpumodel.sh 6130b has at least four alphanumeric characters.
+tput: No value for $TERM and no -T specified
+[92m Pass [0m cpusimd.sh CPU SIMD capabilities include AVX: SSE SSE2 AVX AVX2 FMA AVX51
+g++ ... -o mini.o/mesh.6130b.gcc.o
+g++ ... -o mini.o/elem.6130b.gcc.o
+g++ ... -o mini.o/phys.6130b.gcc.o
+g++ ... -o mini.o/solv.6130b.gcc.o
+g++ ... -o mini.o/elem-tet.6130b.gcc.o
+g++ ... -o mini.o/halo-pcg-omp.6130b.gcc.o
+g++ ... -o mini.o/halo-ncg-omp.6130b.gcc.o
+g++ ... -o mini.o/halo-pcr-dummy.6130b.gcc.o
+g++ ... -o mini.o/elas-iso3.6130b.gcc.o
+g++ ... -o mini.o/elas-ort3.6130b.gcc.o
+elas-ort3.cc: In member function ‘virtual int ElastOrtho3D::ElemJacobi(Elem*, double*)’:
+elas-ort3.cc:440:14: warning: variable ‘scal_ther’ set but not used [-Wunused-but-set-variable]
+   FLOAT_PHYS scal_ther;
+              ^
+g++ ... -o mini.o/elas-dmv3.6130b.gcc.o
+g++ ... -o mini.o/elas-plkh-iso3.6130b.gcc.o
+g++ ... -o mini.o/elas-ther-iso3.6130b.gcc.o
+g++ ... -o mini.o/elas-ther-ort3.6130b.gcc.o
+g++ ... -o mini.o/ther-iso3.6130b.gcc.o
+g++ ... -o mini.o/elas-iso3-base.6130b.gcc.o
+g++ ... -o mini.o/elas-ort3-bas2.6130b.gcc.o
+g++ ... -o mini.o/elas-dmv3-base.6130b.gcc.o
+g++ ... -o mini.o/elas-plkh-iso3-dum.6130b.gcc.o
+g++ ... -o mini.o/elas-ther-iso3-base.6130b.gcc.o
+g++ ... -o mini.o/elas-ther-ort3-bas2.6130b.gcc.o
+g++ ... -o mini.o/ther-iso3-base.6130b.gcc.o
+g++ ... -o mini.o/test.6130b.gcc.o
+g++ ... -o mini.o/femera-mini.6130b.gcc.o
+femera-mini.cc: In function ‘int main(int, char**)’:
+femera-mini.cc:53:14: warning: variable ‘test_u’ set but not used [-Wunused-but-set-variable]
+   FLOAT_SOLV test_u=0.001; INT_DOF test_dir=0;
+              ^
+femera-mini.cc:53:36: warning: variable ‘test_dir’ set but not used [-Wunused-but-set-variable]
+   FLOAT_SOLV test_u=0.001; INT_DOF test_dir=0;
+                                    ^
+g++ ... -o femerb-6130b-gcc
+g++ ... -o mini.o/elas-iso3-vect.6130b.gcc.o
+g++ ... -o mini.o/elas-ort3-vec2.6130b.gcc.o
+g++ ... -o mini.o/elas-dmv3-vect.6130b.gcc.o
+g++ ... -o mini.o/elas-plkh-iso3-vect.6130b.gcc.o
+g++ ... -o mini.o/ther-iso3-vect.6130b.gcc.o
+g++ ... -o mini.o/gmsh2.6130b.gcc.o
+g++ ... -o mini.o/gmsh2fmr.6130b.gcc.o
+g++ ... -o gmsh2fmr-omp-6130b-gcc
+ok.
+Execution time of femera is 
+1.491779362

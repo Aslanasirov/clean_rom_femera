@@ -1,0 +1,6 @@
+2    242                                 / NPH, NPart/
+1    1                                 / crystalID (1:FCC, 2:BCC, 3:HCP) for phase 1, 2, ..., NPH/
+20.4, 0.05, 1.0, 3.7, 30.8, 0.0, 5.0E10, 3.7   / h0,xm,gam0,tausi,taus0,xms, gamss0, crss0 for phase 1 /
+20.4, 0.05, 1.0, 3.7, 30.8, 0.0, 5.0E10, 3.7   / h0,xm,gam0,tausi,taus0,xms, gamss0, crss0 for phase 2 /
+10  1.0d-5                             / maxIterState, tolerState /
+20  1.0d-10                            / maxIterNewt, tolerNewt (absolute tolerance) /

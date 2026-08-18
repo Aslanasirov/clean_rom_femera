@@ -1,0 +1,52 @@
+-catch_rsh /cm/local/apps/sge/var/spool/node013/active_jobs/198763.1/pe_hostfile
+node013:1
+========== Reformat AMP Tensors ===========
+GrainNum is  13
+dGrainNum is  1
+CompNodeNum is  1
+ipfs are  [13]
+Mijkl is defined!
+PartitionVol is defined!
+icn is  0
+nUCP is  13
+	0.0 hundred IFP extracted!
+IFP line is  [  55  280  505  730  955 1180 1405 1630 1855 2080 2305 2530 2755 2938]
+Find line number for this IFP in 0.001404094509780407 seconds
+icn is  0  printing  1
+icn is  0  printing  2
+icn is  0  printing  3
+icn is  0  printing  4
+icn is  0  printing  5
+icn is  0  printing  6
+icn is  0  printing  7
+icn is  0  printing  8
+icn is  0  printing  9
+icn is  0  printing  10
+icn is  0  printing  11
+icn is  0  printing  12
+icn is  0  printing  13
+Extract Mijkl and Pijkl in 0.027439563535153866 seconds
+Read in PartitionVol in 0.0015435116365551949 seconds
+Start to compute Aijkl
+Compute Aijkl in 0.01974585372954607 seconds
+am print shape is  936 
+
+Assemble A and M in 0.0006776181980967522 seconds
+Start to write AMP to new file
+	Start to assemble 0 to 12 cols
+		Read data in 0.007389851845800877 seconds
+		Print these Cols in 0.021489442326128483 seconds
+==========================================
+           Create New CoefTens            
+==========================================
+GrainNum is  13
+Reading and processing data in 0.002383025363087654 seconds
+	Computing interaction flags
+	Computing interaction flags in 6.730295717716217e-05 seconds
+Computing new CoefTens
+	Start to process 0 to 12 rows
+		Read data in 0.007998188957571983 seconds
+         	Update diagonal terms in 0.00034939125180244446 seconds
+	Start to print 0 to 12 rows
+		Assemble sparse components in 0.005046307109296322 seconds
+		Print these Cols in 0.020559152588248253 seconds

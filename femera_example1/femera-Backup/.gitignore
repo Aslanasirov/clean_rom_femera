@@ -1,0 +1,53 @@
+# Old, temporary, and extra files
+*.old
+*.tmp
+*.cpy
+*.log
+*.err
+*.csv
+!perf/slice-*.csv
+!perf/part-slice.csv
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+femera-*
+!femera-mini.cc
+!femera-*.sh
+femerq*
+femser*
+femseq*
+femerb*
+femeqk*
+femerk*
+gmsh2fmr*
+!gmsh2fmr.cc

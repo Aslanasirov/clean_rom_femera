@@ -1,0 +1,103 @@
+Got 1 processors.
+Machines:
+JOBNAME:
+JOBN0:
+JOB_ID: 198768
+node013:1
+pwd: /home/anasirov/nasa/esireport/rom_example1
+=============
+ MODIFY SIM FILES TO HAVE CORRECT INPUTS
+=============
+========== Modify Simulation Files ===========
+~~~ Reading ~~~
+GrainNum is  13
+~~~ Modules.f90 ~~~
+~~~ test.xtali ~~~
+~~~ tension.inp ~~~
+Analysis initiated from SIMULIA established products
+Abaqus JOB tension
+Abaqus 2020
+Begin Compiling Abaqus/Standard User Subroutines
+Fri 26 Jan 2024 03:48:05 PM CST
+ Intel(R) Fortran 2021.3.0-2539
+End Compiling Abaqus/Standard User Subroutines
+Begin Linking Abaqus/Standard User Subroutines
+GNU ld version 2.27-27.base.el7
+End Linking Abaqus/Standard User Subroutines
+Fri 26 Jan 2024 03:48:19 PM CST
+Begin Analysis Input File Processor
+Fri 26 Jan 2024 03:48:19 PM CST
+Run pre
+Fri 26 Jan 2024 03:48:21 PM CST
+End Analysis Input File Processor
+Begin Abaqus/Standard Analysis
+Fri 26 Jan 2024 03:48:21 PM CST
+Run standard
+ uexternaldb called, LOP=           0
+        Start Analysis of job tension: 15:48:21 on 26^th
+ Start to initialize pardiso
+ pardiso reorder and symblic factorization started!
+ pardiso reorder and symblic factorization finished!
+ Start to initialize pardiso
+ pardiso reorder and symblic factorization Started!
+ pardiso reorder and symblic factorization finished!
+ time(2) is  0.000000000000000E+000
+ time(2) is  0.000000000000000E+000
+ time(2) is  0.000000000000000E+000
+ time(2) is  0.000000000000000E+000
+ time(2) is  1.000000000000000E-004
+ time(2) is  1.000000000000000E-004
+ time(2) is  2.000000000000000E-004
+ time(2) is  2.000000000000000E-004
+ time(2) is  3.500000000000001E-004
+ time(2) is  3.500000000000001E-004
+ time(2) is  5.750000000000001E-004
+ time(2) is  5.750000000000001E-004
+ time(2) is  9.125000000000001E-004
+ time(2) is  9.125000000000001E-004
+ time(2) is  1.418750000000000E-003
+ time(2) is  1.418750000000000E-003
+ time(2) is  2.178125000000000E-003
+ time(2) is  2.178125000000000E-003
+ time(2) is  3.317187500000000E-003
+ time(2) is  3.317187500000000E-003
+ time(2) is  5.025781250000000E-003
+ time(2) is  5.025781250000000E-003
+ time(2) is  7.588671874999999E-003
+ time(2) is  7.588671874999999E-003
+ time(2) is  1.143300781250000E-002
+ time(2) is  1.143300781250000E-002
+ time(2) is  1.719951171875000E-002
+ time(2) is  1.719951171875000E-002
+ time(2) is  2.584926757812500E-002
+ time(2) is  2.584926757812500E-002
+ time(2) is  3.882390136718750E-002
+ time(2) is  3.882390136718750E-002
+ time(2) is  5.828585205078125E-002
+ time(2) is  5.828585205078125E-002
+ time(2) is  8.747877807617187E-002
+ time(2) is  8.747877807617187E-002
+ time(2) is  0.131268167114258     
+ time(2) is  0.131268167114258     
+ time(2) is  0.196952250671387     
+ time(2) is  0.196952250671387     
+ time(2) is  0.295478376007080     
+ time(2) is  0.295478376007080     
+ time(2) is  0.443267564010620     
+ time(2) is  0.443267564010620     
+ time(2) is  0.643267564010620     
+ time(2) is  0.643267564010620     
+ time(2) is  0.843267564010620     
+ time(2) is  0.843267564010620     
+ tss=   8.460000016202684E-002 ths=   1.599999959580600E-003 tsj= 
+  1.450000044133049E-002
+          End Analysis of job tension: 15:48:27 on 26^th
+              Total walltime:      0 hours     0 minutes     6.19930 seconds.
+Fri 26 Jan 2024 03:48:28 PM CST
+End Abaqus/Standard Analysis
+Begin SIM Wrap-up
+Fri 26 Jan 2024 03:48:28 PM CST
+Run SMASimUtility
+Fri 26 Jan 2024 03:48:28 PM CST
+End SIM Wrap-up
+Abaqus JOB tension COMPLETED

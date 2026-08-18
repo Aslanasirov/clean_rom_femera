@@ -1,0 +1,6 @@
+#!/bin/bash
+# THIS FILE SUBMITS FEMERA JOBS (IN ./JOBS/CNODE* DIRECTORIES)
+CompNodeNum=1
+# SUBMIT THE JOB IN FIRST FOLDER TO NODE 13
+cd Jobs/cnode1
+qsub -l h=node013 Run.sh

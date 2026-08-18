@@ -1,0 +1,122 @@
+pwd: /home/anasirov/nasa/esireport/femera_example1
+========== Split GMSH File According to Partitions ===========
+GrainNum is  13
+prefix is  example1
+nEls is  1000
+Read the Elements in 0.001656058244407177 seconds
+Start to convert the Elements variable format from string to int
+	0.0 million elements format converted!
+Convert the HexEls variable format in 0.004567552357912064 seconds
+nElSets is  13
+Read the ElSets in 0.0014128899201750755 seconds
+Find element set IDs in 0.00037763454020023346 seconds
+Start to save GrainEls to files
+	0.0 thousand grains converted!
+Save GrainEls in 0.06871504988521338 seconds
+nNodes is  1331
+Read the Nodes in 0.002326700836420059 seconds
+Start to convert the Nodes variable format from string to int
+	0.0 million nodes format converted!
+Convert the Nodes variable format in 0.0038188211619853973 seconds
+Start to find grain nodes and write new files
+	0.0 thousand grains split!
+Extract grain nodes and print new file in 0.07619129586964846 seconds
+========== Apply Periodic Boundary Conditinos in Gmsh ===========
+GrainNum is  13
+Voxel Resolution is  1
+prefix is  example1
+Start to read in nodes
+nNodes is  1331
+Read the Nodes in 0.00149492546916008 seconds
+Start to convert the Nodes variable format from string to int
+	0.0 * 5 million nodes format converted!
+Convert Nodes in 0.001626044511795044 seconds
+Start to find nodes on boundaries
+	length of CornerNodes is  8
+	length of EdgeNodes is  108
+	length of XxSurfNodes is  162
+	length of YySurfNodes is  162
+	length of ZzSurfNodes is  162
+Found boundary nodes in 0.0012143896892666817 seconds
+Start to build master-slave connection
+	Start to pair master-slave for edge nodes
+	Edge saster-slave connection built in 0.0010588672012090683 seconds
+	Start to pair master-slave for surface nodes on X
+		length of SlaveNodes is  81
+		length of MasterNodes is  81
+	X Surface master-slave connection built in 0.0008262377232313156 seconds
+	Start to pair master-slave for surface nodes on Y
+		length of SlaveNodes is  81
+		length of MasterNodes is  81
+	Y Surface master-slave connection built in 0.0007354030385613441 seconds
+	Start to pair master-slave for surface nodes on Z
+		length of SlaveNodes is  81
+		length of MasterNodes is  81
+	Z Surface master-slave connection built in 0.0007063467055559158 seconds
+		length of MSpair is  324
+Built master-slave connection in 0.0034186337143182755 seconds
+Start to write new msh files
+Generate new files in 0.5271960692480206 seconds
+tput: No value for $TERM and no -T specified
+[92m Pass [0m cpucount.sh counted 32 physical cores.
+tput: No value for $TERM and no -T specified
+[92m Pass [0m cpumodel.sh 6130b has at least four alphanumeric characters.
+tput: No value for $TERM and no -T specified
+[92m Pass [0m cpusimd.sh CPU SIMD capabilities include AVX: SSE SSE2 AVX AVX2 FMA AVX51
+g++ ... -o mini.o/mesh.6130b.gcc.o
+g++ ... -o mini.o/elem.6130b.gcc.o
+g++ ... -o mini.o/phys.6130b.gcc.o
+g++ ... -o mini.o/solv.6130b.gcc.o
+g++ ... -o mini.o/elem-tet.6130b.gcc.o
+g++ ... -o mini.o/halo-pcg-omp.6130b.gcc.o
+g++ ... -o mini.o/halo-ncg-omp.6130b.gcc.o
+g++ ... -o mini.o/halo-pcr-dummy.6130b.gcc.o
+g++ ... -o mini.o/elas-iso3.6130b.gcc.o
+g++ ... -o mini.o/elas-ort3.6130b.gcc.o
+elas-ort3.cc: In member function ‘virtual int ElastOrtho3D::ElemJacobi(Elem*, double*)’:
+elas-ort3.cc:440:14: warning: variable ‘scal_ther’ set but not used [-Wunused-but-set-variable]
+   FLOAT_PHYS scal_ther;
+              ^
+g++ ... -o mini.o/elas-dmv3.6130b.gcc.o
+g++ ... -o mini.o/elas-plkh-iso3.6130b.gcc.o
+g++ ... -o mini.o/elas-ther-iso3.6130b.gcc.o
+g++ ... -o mini.o/elas-ther-ort3.6130b.gcc.o
+g++ ... -o mini.o/ther-iso3.6130b.gcc.o
+g++ ... -o mini.o/elas-iso3-base.6130b.gcc.o
+g++ ... -o mini.o/elas-ort3-bas2.6130b.gcc.o
+g++ ... -o mini.o/elas-dmv3-base.6130b.gcc.o
+g++ ... -o mini.o/elas-plkh-iso3-dum.6130b.gcc.o
+g++ ... -o mini.o/elas-ther-iso3-base.6130b.gcc.o
+g++ ... -o mini.o/elas-ther-ort3-bas2.6130b.gcc.o
+g++ ... -o mini.o/ther-iso3-base.6130b.gcc.o
+g++ ... -o mini.o/test.6130b.gcc.o
+g++ ... -o mini.o/femera-mini.6130b.gcc.o
+femera-mini.cc: In function ‘int main(int, char**)’:
+femera-mini.cc:53:14: warning: variable ‘test_u’ set but not used [-Wunused-but-set-variable]
+   FLOAT_SOLV test_u=0.001; INT_DOF test_dir=0;
+              ^
+femera-mini.cc:53:36: warning: variable ‘test_dir’ set but not used [-Wunused-but-set-variable]
+   FLOAT_SOLV test_u=0.001; INT_DOF test_dir=0;
+                                    ^
+g++ ... -o femerb-6130b-gcc
+g++ ... -o mini.o/elas-iso3-vect.6130b.gcc.o
+g++ ... -o mini.o/elas-ort3-vec2.6130b.gcc.o
+g++ ... -o mini.o/elas-dmv3-vect.6130b.gcc.o
+g++ ... -o mini.o/elas-plkh-iso3-vect.6130b.gcc.o
+g++ ... -o mini.o/ther-iso3-vect.6130b.gcc.o
+g++ ... -o mini.o/gmsh2.6130b.gcc.o
+g++ ... -o mini.o/gmsh2fmr.6130b.gcc.o
+g++ ... -o gmsh2fmr-omp-6130b-gcc
+ok.
+Execution time of Example1.sh is 
+.158405427
+========== Apply Fixed Boundary Conditinos ===========
+GrainNum is  13
+dGrainNum is  1
+GrainNum is  13
+dGrainNum is  1
+CompNodeNum is  1
+13
+0
+[13]
+node  1  from  1  to  13

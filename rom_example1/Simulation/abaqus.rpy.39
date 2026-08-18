@@ -1,0 +1,168 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2020 replay file
+# Internal Version: 2019_09_13-12.49.31 163176
+# Run by anasirov on Thu Jan 25 18:08:35 2024
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+#: Executing "onCaeGraphicsStartup()" in the local directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=218.016662597656, 
+    height=164.930557250977)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+#: Executing "onCaeStartup()" in the local directory ...
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+o1 = session.openOdb(
+    name='/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb')
+session.viewports['Viewport: 1'].setValues(displayedObject=o1)
+#: Model: /home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       1
+#: Number of Node Sets:          8
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S11'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.46539, 
+    farPlane=4.79395, width=1.84539, height=1.15692, cameraPosition=(2.13324, 
+    2.0703, 2.63324), cameraUpVector=(-0.609473, 0.57643, -0.544308), 
+    cameraTarget=(0.020979, -0.0419581, 0.520979))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.48002, 
+    farPlane=4.77933, width=1.85635, height=1.16379, cameraPosition=(2.13324, 
+    2.0703, 2.63324), cameraUpVector=(-0.591072, 0.577185, -0.563464), 
+    cameraTarget=(0.020979, -0.0419581, 0.520979))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.48018, 
+    farPlane=4.77917, width=1.85647, height=1.16386, viewOffsetX=-0.0972439, 
+    viewOffsetY=-0.0299783)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=2.46472, 
+    farPlane=4.79463, width=2.00101, height=1.25448, viewOffsetX=-0.0511373, 
+    viewOffsetY=-0.0248899)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('SDV1', INTEGRATION_POINT), ), elementSets=(" ALL ELEMENTS", ))
+xyp = session.XYPlot('XYPlot-1')
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+session.viewports['Viewport: 1'].setValues(displayedObject=xyp)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('S', INTEGRATION_POINT, ((COMPONENT, 'S11'), )), ), 
+    elementSets=(" ALL ELEMENTS", ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('E', INTEGRATION_POINT, ((COMPONENT, 'E11'), )), ('S', 
+    INTEGRATION_POINT, ((COMPONENT, 'S11'), )), ), elementSets=(
+    " ALL ELEMENTS", ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('E', INTEGRATION_POINT, ((COMPONENT, 'E11'), )), ('S', 
+    INTEGRATION_POINT, ((COMPONENT, 'S11'), )), ('SDV1', INTEGRATION_POINT), ), 
+    elementSets=(" ALL ELEMENTS", ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('E', INTEGRATION_POINT, ((COMPONENT, 'E11'), )), ('S', 
+    INTEGRATION_POINT, ((COMPONENT, 'S11'), )), ('SDV1', INTEGRATION_POINT), (
+    'SDV72', INTEGRATION_POINT), ), elementSets=(" ALL ELEMENTS", ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('E', INTEGRATION_POINT, ((COMPONENT, 'E11'), )), ('S', 
+    INTEGRATION_POINT, ((COMPONENT, 'S11'), )), ('SDV1', INTEGRATION_POINT), (
+    'SDV142', INTEGRATION_POINT), ('SDV72', INTEGRATION_POINT), ), 
+    elementSets=(" ALL ELEMENTS", ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('E', INTEGRATION_POINT, ((COMPONENT, 'E11'), )), ('S', 
+    INTEGRATION_POINT, ((COMPONENT, 'S11'), )), ('SDV1', INTEGRATION_POINT), (
+    'SDV143', INTEGRATION_POINT), ('SDV72', INTEGRATION_POINT), ), 
+    elementSets=(" ALL ELEMENTS", ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('E', INTEGRATION_POINT, ((COMPONENT, 'E11'), )), ('S', 
+    INTEGRATION_POINT, ((COMPONENT, 'S11'), )), ('SDV1', INTEGRATION_POINT), (
+    'SDV143', INTEGRATION_POINT), ('SDV214', INTEGRATION_POINT), ('SDV72', 
+    INTEGRATION_POINT), ), elementSets=(" ALL ELEMENTS", ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('E', INTEGRATION_POINT, ((COMPONENT, 'E11'), )), ('S', 
+    INTEGRATION_POINT, ((COMPONENT, 'S11'), )), ('SDV1', INTEGRATION_POINT), (
+    'SDV143', INTEGRATION_POINT), ('SDV214', INTEGRATION_POINT), ('SDV285', 
+    INTEGRATION_POINT), ('SDV72', INTEGRATION_POINT), ), elementSets=(
+    " ALL ELEMENTS", ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
+odb = session.odbs['/home/anasirov/nasa/esireport/rom_example1/Simulation/tension.odb']
+xyList = xyPlot.xyDataListFromField(odb=odb, outputPosition=INTEGRATION_POINT, 
+    variable=(('E', INTEGRATION_POINT, ((COMPONENT, 'E11'), )), ('S', 
+    INTEGRATION_POINT, ((COMPONENT, 'S11'), )), ), elementSets=(
+    " ALL ELEMENTS", ))
+xyp = session.xyPlots['XYPlot-1']
+chartName = xyp.charts.keys()[0]
+chart = xyp.charts[chartName]
+curveList = session.curveSet(xyData=xyList)
+chart.setValues(curvesToPlot=curveList)
+session.charts[chartName].autoColor(lines=True, symbols=True)
